@@ -8,6 +8,8 @@
 	<title>CS362 Project</title>
 </head>
 <body>
-	<h1>CS362 Project</h1>
-</body>
+	<form action="search.php" method="POST" accept-charset="utf-8">
+		<label for="search">Search</label><input type="text" name="search" value="" id="search">
+		<p><input type="submit" value="Search"></p>
+	</form></body>
 </html>
