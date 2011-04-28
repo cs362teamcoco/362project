@@ -1,34 +1,26 @@
-/*************** CSS RESET ***************/
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+table, caption, tbody, tfoot, thead, tr, th, td {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	outline: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
+	background: transparent;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+html{
+	background-color: #01545f;
 }
 body {
 	line-height: 1;
@@ -44,7 +36,262 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+body{
+	background-image: url('../_images/main_bg.png');
+	background-repeat: repeat-x;
+	background-color: #82F0FF;
+}
+
+.right{
+	float: right;
+}
+
+a{
+	color: #F25086;
+}
+
+a:hover{
+	color: #FFFFFF;
+}
+/********** END CSS RESET ***************/
+
+
+
+
+/********** DEFAULT STYLES ************/
+
+.shadow{
+	box-shadow: 3px 3px 4px #000;
+	-moz-box-shadow: 3px 3px 4px #000;
+	-webkit-box-shadow: 3px 3px 4px #000;
+	border-radius: 5px;
+}
+
+.clear{
+	clear: both;
+}
+
+
+#wrapper{
+	width: 900px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #82F0FF;
+}
+
+
+/********** HEADER SECTION STYLES ***********/
+
+#header{
+	height: 125px;
+	background-color: #525252;
+	border-bottom: 1px solid #FFF;
+}
+
+#header h1{
+	text-align: center;
+	font-size: 2em;
+	color: #FFFFFF;
+}
+
+#header h2{
+	text-align: center;
+	font-size: 2.5em;
+	padding-top: 30px;
+	text-decoration: underline;
+}
+
+/****** MAIN BODY SECTION STYLES **********/
+
+#main{
+	min-height: 400px;
+	height: auto;
+	overflow: auto;
+}
+
+#main h3{
+	font-size: 1.2em;
+	padding: 3px;
+}
+
+/********** FOOTER SECTION STYLES ***********/
+
+#footer{
+	height: 125px;
+	background-color: #525252;
+	border-top: 1px solid #FFF;
+}
+
+.rights{
+	font-size: 0.75em;
+	text-align: center;
+	margin-top: 100px;
+}
+
+/********** MAIN NAVIGATION **************/
+
+#nav {
+	width: 630px;
+	margin: 5px auto;
+	display: block;
+	margin-bottom: 100px;
+}
+
+#nav ul {
+	float: left;
+	list-style-type: none;
+	width: 600px;
+	height: 44px;
+
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+
+	background: #e3e3e3;
+	background: -moz-linear-gradient(top, #ccc, #999);
+	background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#999));
+
+	-moz-box-shadow: 1px 1px 3px #333;
+	-webkit-box-shadow: 1px 1px 3px #333;
+	box-shadow: 1px 1px 3px #333;
+
+	text-shadow: 0 1px 0 white;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#nav ul li{
+	display: inline;
+}
+
+#nav ul li a{
+	display: block;
+	padding: 10px 20px 10px 20px;
+	list-style-type: none;
+	float: left;
+	color: #454545;
+	font-size: 18px;
+	text-decoration: none;
+	width: 80px;
+	text-align: center;
+}
+
+#nav ul a:hover{
+	color: #F25086;
+}
+
+
+
+/********** LOGIN SECTION STYLES ***********/
+
+#login_section{
+	width: 500px;
+	float: right;
+	padding: 20px;
+	display: block;
+}
+
+#login_section form{
+	display: block;
+	text-align: left;
+}
+
+#login_section label{
+	padding: 10px;
+}
+
+#login_section input{
+	margin: 5px;
+}
+
+
+/********** ERROR BOX ********************/
+#error{
+	padding: 10px;
+}
+
+#error_box{
+	width: 400px;
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 50px;
+	border: 3px solid black;
+}
+
+#error_box h3{
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+}
+
+/************* SEARCH AREA STYLES *****************/
+
+#search_area{
+	float: left;
+	width: 300px;
+}
+
+#search_form{
+	padding: 5px;
+	margin: 5px 10px;
+	clear: both;
+}
+
+#search_form form{
+	padding: 10px;
+	background-color: silver;
+	width: 500px;
+	margin: 0px auto;
+}
+
+#search_form h2{
+	padding: 3px;
+	font-size: 1.3em;
+	text-decoration: underline;
+	text-align: center;
+}
+
+#search_form input{
+	margin-bottom: 10px;
+}
+
+
+
+#search_results{
+	border: 1px solid black;
+	margin: 20px auto;
+	padding: 20px;
+	clear: both;
+	background-color: #FFF;
+	width: 750px;
+	min-height: 450px;
+	height: auto;
+	overflow: auto;
+}
+
+#search_results h2{
+	font-size: 1.3em;
+	text-decoration: underline;
 }
